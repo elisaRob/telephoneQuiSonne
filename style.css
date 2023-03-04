@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#333;
+}
+
+.telephoner{
+    width:150px;
+    height:150px;
+    background-color:greenyellow;
+    border-radius:50%;
+    text-align:center;
+    line-height:150px;
+    /* display:flex;
+    justify-content:center;
+    align-items:center; */
+    font-size:60px;  
+    position:relative;
+}
+
+.telephoner:before,.telephoner:after{
+    content:"";
+    position:absolute;
+    top:-20px;
+    left:-20px;
+    right:-20px;
+    bottom:-20px;
+    border:5px solid greenyellow;
+    border-radius:50%;
+    animation-name:sonner;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    
+}
+
+@keyframes sonner{
+    0%{
+        transform:scale(0.5);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:0;
+    }
+}
+
+.telephoner:after{
+    animation-delay:0.2s;
+}
+
+
+
